@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('stripe',[StripeController::class,'stripe']);
+Route::post('stripe',[StripeController::class,'stripePost'])->name('stripe.post');
+
 Route::get('/', function () {
     return view('welcome');
 });
